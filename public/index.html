@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Product Landing Page</title>
+</head>
+<body class="bg-gray-100">
+<div class="container mx-auto p-6" id="input-form-container">
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold text-center text-blue-500">Product Details</h1>
+        <form id="product-form" class="mt-6">
+            <div class="mb-4">
+                <label for="name" class="block text-lg font-semibold text-gray-700">Product Name:</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div class="mb-4">
+                <label for="purpose" class="block text-lg font-semibold text-gray-700">Usage Purpose:</label>
+                <input type="text" id="purpose" name="purpose" class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div class="mb-4">
+                <label for="positiveEffect" class="block text-lg font-semibold text-gray-700">Positive Effects:</label>
+                <input type="text" id="positiveEffect" name="positiveEffect" class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div class="mb-4">
+                <label for="price" class="block text-lg font-semibold text-gray-700">Price:</label>
+                <input type="number" id="price" name="price" class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-700" id="submit-button">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container mx-auto p-6 hidden" id="landing-page-container">
+    <div class="bg-white p-6 rounded-lg shadow-lg" id="product-info">
+        <img id="product-image" class="w-full h-64 object-cover rounded-lg mb-6" alt="Product Image" />
+        <h1 id="headline" class="text-4xl font-bold text-center text-blue-500"></h1>
+        <p id="description" class="mt-4 text-center text-lg text-gray-700"></p>
+        <div class="mt-6 text-center">
+            <p class="text-lg font-semibold">Price: <span id="price-display" class="text-blue-500"></span></p>
+            <a href="#purchase" id="cta" class="inline-block mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-700"></a>
+        </div>
+    </div>
+    <div class="mt-8 p-6 bg-blue-100 rounded-lg" id="product-usage">
+        <h2 class="text-2xl font-bold text-center text-blue-500">Why You Need This Product</h2>
+        <p id="purpose-display" class="mt-4 text-center text-lg text-gray-700"></p>
+        <p id="positive-effect-display" class="mt-2 text-center text-lg text-gray-700"></p>
+    </div>
+    <div class="text-center mt-6">
+        <button id="try-again-button" class="px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-700">Try Again with Different Details</button>
+    </div>
+</div>
+
+<div id="loading-spinner" class="hidden">
+    <div class="spinner"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
